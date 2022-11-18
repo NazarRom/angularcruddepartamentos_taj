@@ -1,0 +1,17 @@
+<div>
+    <h1>
+        Insertar
+    </h1>
+    <form #createForm="ngForm">
+        <label>Numero</label><br/>
+        <input type="number" name="cajanumero" #cajanumero/><br/>
+
+        <label>Nomre</label><br/>
+        <input type="text" name="cajanombre" #cajanombre/><br/>
+
+        <label>Localidad</label><br/>
+        <input type="text" name="cajalocalidad" #cajalocalidad><br/><br/>
+        <button (click)="insertarDepartamento()">Insertar</button>
+     </form>
+
+</div>

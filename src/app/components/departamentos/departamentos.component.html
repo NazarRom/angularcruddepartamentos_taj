@@ -1,0 +1,30 @@
+<div>
+    <img *ngIf="!departamentos" src="../../../assets/images/loading.gif" />
+    <table class="table table-info" *ngIf="departamentos">
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Nombre</th>
+                <th>Localidad</th>
+                <th>Detalles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dep of departamentos">
+                <td>{{dep.numero}}</td>
+                <td>{{dep.nombre}}</td>
+                <td>{{dep.localidad}}</td>
+                <td>
+                    <a [routerLink]="['/delete',dep.numero]" class="btn btn-dark" >Empleados</a>
+                    <a [routerLink]="['/edit', dep.numero,dep.nombre,dep.localidad]"
+                        class="btn btn-warning">Modificar</a>
+
+                        <a [routerLink]="['/delete',dep.numero]" class="btn btn-success" >Borrar ruta</a>
+
+                        <button (click)="deleteDepartamento(dep.numero)" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

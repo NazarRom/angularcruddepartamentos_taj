@@ -1,0 +1,17 @@
+<div>
+    <h1>
+        Modificar
+    </h1>
+    <form #createForm="ngForm" *ngIf="departamento">
+        
+        <input type="hidden" name="cajanumero" #cajanumero value="{{departamento.numero}}"/><br/>
+
+        <label>Nomre</label><br/>
+        <input type="text" name="cajanombre" #cajanombre  value="{{departamento.nombre}}"/><br/>
+
+        <label>Localidad</label><br/>
+        <input type="text" name="cajalocalidad" #cajalocalidad  value="{{departamento.localidad}}"><br/><br/>
+        <button (click)="updateDepartamento()">Insertar</button>
+     </form>
+
+</div>
